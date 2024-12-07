@@ -23,14 +23,19 @@ const stringValue = arrays.map((element) =>{
 console.log(stringValue)
 
 // Q2: Filter only number elements using filter Method.
-const num= arrays.filter((element) => typeof element === "number");
+const num= arrays.filter((element) => {
+   return typeof element === "number";
+
+
+})
+  
 console.log( num );
 
  // Q3: Log each element's type to the console using forEach Method.
  const elementType = arrays.forEach((element) => {
-  console.log(typeof element);
- });
 
+ console.log(typeof element)
+ });
 
 // // Q4: Sum up only the numbers in the array using reduce Method.
 const findNumbers = arrays.filter((element) => typeof element === "number")
@@ -42,11 +47,17 @@ console.log( sumNumbers);
 
 
 // Q5: Find the first boolean value in an array using find Method.
-const firstBoolean = arrays.find((element) => typeof element === "boolean");
+const firstBoolean = arrays.find((element) => 
+  {
+    return typeof element === "boolean"
+
+  });
 console.log( firstBoolean);
 
 // Q6: Find the index of the first object in an array using findIndex Method.
-const firstObj = arrays.findIndex((element) => typeof element === "object");
+const firstObj = arrays.findIndex((element) =>{ 
+   return typeof element === "object"}
+);
 console.log( firstObj);
 
 // Q7: Check if the array contains any numbers in an array using some method.
